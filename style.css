@@ -51,9 +51,28 @@ header{
   backdrop-filter:blur(12px);
   border-bottom:1px solid oklch(1 0 0 / 0.08);
 }
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1100px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px;max-width:1100px}
 .logo{display:flex;align-items:center;gap:12px;color:#fff;font-family:'Montserrat';font-weight:800;font-size:1.1rem;letter-spacing:-0.01em}
-.logo-img{height:44px;max-height:44px;width:auto;max-width:100px;object-fit:contain;display:block}
+.logo-img{height:64px;max-height:64px;width:auto;max-width:140px;object-fit:contain;display:block}
+
+/* ---------- nav links ---------- */
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a{
+  color:oklch(0.85 0.01 70);
+  font-family:'Montserrat',sans-serif;font-weight:600;font-size:.85rem;
+  padding:8px 16px;border-radius:999px;
+  transition:background .18s,color .18s;
+  white-space:nowrap;
+}
+.nav-links a:hover{background:oklch(1 0 0 / 0.1);color:#fff}
+.nav-links a:last-child{
+  background:var(--orange);color:#fff;
+  box-shadow:0 4px 14px -4px oklch(0.72 0.195 44 / 0.5);
+}
+.nav-links a:last-child:hover{filter:brightness(1.08)}
+@media(max-width:560px){
+  .nav-links a:not(:last-child){display:none}
+}
 
 /* ---------- page hero ---------- */
 .page-hero{
@@ -85,6 +104,55 @@ header{
 }
 .tag-dot{width:7px;height:7px;border-radius:50%;background:var(--orange);flex:none;
   box-shadow:0 0 0 4px oklch(0.70 0.175 47 / 0.28)}
+
+/* ---------- hero ctas ---------- */
+.hero-ctas{display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn-hero{font-size:1.05rem;padding:17px 32px}
+.btn-ghost{
+  color:oklch(0.88 0.01 70);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;
+  padding:8px 4px;border-bottom:2px solid oklch(0.88 0.01 70 / 0.4);
+  transition:color .18s,border-color .18s;
+}
+.btn-ghost:hover{color:#fff;border-color:#fff}
+
+/* ---------- section cta ---------- */
+.section-cta{margin-top:36px;text-align:center}
+
+/* ---------- stats headline ---------- */
+.stats-headline{
+  text-align:center;margin-bottom:48px;
+  display:flex;flex-direction:column;align-items:center;gap:20px;
+}
+.stats-headline h2{
+  font-family:'Montserrat',sans-serif;font-size:clamp(1.2rem,2.5vw,1.6rem);
+  font-weight:800;color:#fff;max-width:38ch;line-height:1.25;
+}
+.btn-light{
+  background:#fff;color:var(--orange-strong);
+  box-shadow:0 8px 22px -8px oklch(1 0 0 / 0.25);
+}
+.btn-light:hover{filter:brightness(0.97)}
+
+/* ---------- cta banner ---------- */
+.cta-banner{background:var(--orange);padding:56px 0}
+.cta-banner-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:32px;flex-wrap:wrap;max-width:860px!important;
+}
+.cta-banner-text h2{
+  font-size:clamp(1.25rem,2.8vw,1.65rem);font-weight:800;
+  color:#fff;margin-bottom:8px;line-height:1.2;
+}
+.cta-banner-text p{color:oklch(1 0 0 / 0.82);font-size:.97rem;max-width:44ch}
+.cta-banner .btn{
+  background:#fff;color:var(--orange-strong);flex:none;white-space:nowrap;
+  box-shadow:0 8px 24px -8px oklch(0.40 0.15 40 / 0.35);
+}
+.cta-banner .btn:hover{filter:brightness(0.97)}
+@media(max-width:640px){
+  .cta-banner-inner{flex-direction:column;text-align:center}
+  .cta-banner-text p{max-width:none}
+}
 
 /* ---------- form area ---------- */
 .form-area{padding:48px 0 80px}
@@ -383,6 +451,11 @@ footer{background:var(--dark);color:oklch(0.80 0.01 70);padding:40px 0 28px}
   min-height:220px;
   background:linear-gradient(140deg,var(--dark) 0%,var(--dark-2) 100%);
   border-color:transparent;
+}
+.ct-featured-img{
+  background:
+    linear-gradient(to top, oklch(0.21 0.09 262 / 0.95) 0%, oklch(0.21 0.09 262 / 0.55) 55%, oklch(0.15 0.07 262 / 0.25) 100%),
+    url('assets/gestao e negocios.png') center/cover no-repeat !important;
 }
 .ct-featured h3{color:#fff}
 .ct-featured p{color:oklch(0.72 0.01 70)}
