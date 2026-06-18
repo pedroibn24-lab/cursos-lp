@@ -459,11 +459,15 @@ footer{background:var(--dark);color:oklch(0.80 0.01 70);padding:40px 0 28px}
 }
 .ct-featured-img{
   background:
-    linear-gradient(to top, oklch(0.21 0.09 262 / 0.95) 0%, oklch(0.21 0.09 262 / 0.55) 55%, oklch(0.15 0.07 262 / 0.25) 100%),
+    linear-gradient(to top,
+      oklch(0.10 0.09 262 / 1.00)  0%,
+      oklch(0.13 0.09 262 / 0.92) 35%,
+      oklch(0.15 0.07 262 / 0.35) 65%,
+      transparent 100%),
     url('assets/gestao e negocios.png') center/cover no-repeat !important;
 }
-.ct-featured h3{color:#fff}
-.ct-featured p{color:oklch(0.72 0.01 70)}
+.ct-featured h3{color:#fff!important;font-size:1.2rem}
+.ct-featured p{color:oklch(0.80 0.01 70)!important;font-size:.84rem;line-height:1.6}
 .ct-featured .ct-num{color:oklch(0.70 0.175 47 / 0.55)}
 .ct-num{
   font-family:'Montserrat',sans-serif;
@@ -473,6 +477,37 @@ footer{background:var(--dark);color:oklch(0.80 0.01 70);padding:40px 0 28px}
 }
 .ct h3{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:7px}
 .ct p{font-size:.84rem;color:var(--ink-soft);line-height:1.6}
+
+/* ── cards com imagem de fundo ── */
+.ct-img{
+  border-color:transparent;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  min-height:180px;
+}
+.ct-img h3{color:#fff}
+.ct-img p{color:oklch(0.80 0.01 70)}
+.ct-img .ct-num{color:oklch(0.70 0.175 47 / 0.55)}
+.ct-tecnologia{
+  background:
+    linear-gradient(to top,oklch(0.21 0.09 262/.95) 0%,oklch(0.21 0.09 262/.50) 55%,oklch(0.15 0.07 262/.15) 100%),
+    url('assets/tecnologia.png') center/cover no-repeat;
+}
+.ct-comunicacao{
+  background:
+    linear-gradient(to top,oklch(0.21 0.09 262/.95) 0%,oklch(0.21 0.09 262/.50) 55%,oklch(0.15 0.07 262/.15) 100%),
+    url('assets/comunicacao e design.png') center/cover no-repeat;
+}
+.ct-saude{
+  background:
+    linear-gradient(to top,oklch(0.21 0.09 262/.95) 0%,oklch(0.21 0.09 262/.50) 55%,oklch(0.15 0.07 262/.15) 100%),
+    url('assets/saude e educacao.png') center/cover no-repeat;
+}
+.ct-direito{
+  background:
+    linear-gradient(to top,oklch(0.21 0.09 262/.95) 0%,oklch(0.21 0.09 262/.50) 55%,oklch(0.15 0.07 262/.15) 100%),
+    url('assets/direito humanas e turismo.png') center/cover no-repeat;
+}
+
 .ct-badge{
   display:inline-block;
   font-size:.72rem;font-weight:700;
