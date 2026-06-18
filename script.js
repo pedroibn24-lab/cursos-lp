@@ -116,4 +116,19 @@ const SHEET_ENDPOINT = ""; // Cole aqui o endpoint do seu Google Apps Script
     entries.forEach(en => { if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
   }, {threshold: 0.08});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', function(){
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if(!expanded){
+        this.setAttribute('aria-expanded', 'true');
+        this.nextElementSibling.classList.add('open');
+      }
+    });
+  });
 })();
