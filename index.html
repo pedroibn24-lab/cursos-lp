@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quero saber mais sobre os cursos — Anhanguera</title>
+<meta name="description" content="Preencha seus dados e receba informações sobre cursos, valores, bolsas e formas de ingresso." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self';" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<link rel="icon" type="image/png" href="assets/anhanguera-logo-colorido-vertical2.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#" aria-label="Anhanguera">
+      <img src="assets/anhanguera-logo-colorido-vertical.png" alt="Anhanguera" class="logo-img" />
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="page-hero">
+  <div class="wrap reveal">
+    <span class="tag"><span class="tag-dot"></span>Informações sobre cursos</span>
+    <h1>Quero saber mais sobre <em>os cursos</em></h1>
+    <p>Preencha seus dados e receba informações sobre cursos, valores, bolsas e formas de ingresso.</p>
+  </div>
+</section>
+
+<!-- ============ FORM ============ -->
+<section class="form-area">
+  <div class="wrap">
+
+    <div class="form-card reveal" id="formCard">
+
+      <div class="form-card-header">
+        <h2>Formulário de interesse</h2>
+        <p>Todos os campos marcados com <strong style="color:oklch(0.85 0.10 47)">*</strong> são obrigatórios.</p>
+      </div>
+
+      <div class="form-body">
+        <form id="leadForm" novalidate autocomplete="on">
+
+          <!-- ── DADOS DE CONTATO ── -->
+          <div class="form-group">
+            <div class="form-group-title">Dados de contato</div>
+
+            <div class="field">
+              <label class="field-label" for="nome">
+                <span class="q-num">1</span>Nome completo <span class="req">*</span>
+              </label>
+              <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome completo" required />
+              <span class="err">Informe seu nome completo.</span>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="whatsapp">
+                <span class="q-num">2</span>WhatsApp com DDD <span class="req">*</span>
+              </label>
+              <input type="tel" id="whatsapp" name="whatsapp" inputmode="numeric" autocomplete="tel" placeholder="(00) 00000-0000" required />
+              <span class="err">Informe um WhatsApp válido com DDD.</span>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="cidade">
+                <span class="q-num">3</span>Cidade onde você mora <span class="req">*</span>
+              </label>
+              <input type="text" id="cidade" name="cidade" autocomplete="address-level2" placeholder="Ex: São Paulo" required />
+              <span class="err">Informe sua cidade.</span>
+            </div>
+          </div>
+
+          <!-- ── ESCOLARIDADE ── -->
+          <div class="form-group">
+            <div class="form-group-title">Formação educacional</div>
+
+            <div class="field">
+              <div class="field-label">
+                <span class="q-num">4</span>Qual é o seu grau de escolaridade? <span class="req">*</span>
+              </div>
+              <div class="radio-group two-col">
+                <label class="radio-pill">
+                  <input type="radio" name="escolaridade" value="Ensino Fundamental incompleto" required />
+                  <span>Ensino Fundamental incompleto</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="escolaridade" value="Ensino Fundamental completo" />
+                  <span>Ensino Fundamental completo</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="escolaridade" value="Ensino Médio incompleto" />
+                  <span>Ensino Médio incompleto</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="escolaridade" value="Ensino Médio completo" />
+                  <span>Ensino Médio completo</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="escolaridade" value="Ensino Superior incompleto" />
+                  <span>Ensino Superior incompleto</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="escolaridade" value="Ensino Superior completo" />
+                  <span>Ensino Superior completo</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="escolaridade" value="Pós-graduação em andamento" />
+                  <span>Pós-graduação em andamento</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="escolaridade" value="Pós-graduação completa" />
+                  <span>Pós-graduação completa</span>
+                </label>
+              </div>
+              <span class="err">Selecione seu grau de escolaridade.</span>
+            </div>
+          </div>
+
+          <!-- ── INTERESSE EM CURSOS ── -->
+          <div class="form-group">
+            <div class="form-group-title">Interesse em cursos</div>
+
+            <div class="field">
+              <div class="field-label">
+                <span class="q-num">5</span>Sobre qual formação você deseja receber informações? <span class="req">*</span>
+              </div>
+              <div class="radio-group">
+                <label class="radio-pill">
+                  <input type="radio" name="formacao" value="Graduação" required />
+                  <span>Graduação</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="formacao" value="Pós-graduação" />
+                  <span>Pós-graduação</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="formacao" value="Ainda não tenho certeza e gostaria de orientação" />
+                  <span>Ainda não tenho certeza e gostaria de orientação</span>
+                </label>
+              </div>
+              <span class="err">Selecione uma opção.</span>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="curso">
+                <span class="q-num">6</span>Qual curso ou área é do seu interesse? <span class="req">*</span>
+              </label>
+              <select id="curso" name="curso" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <optgroup label="── Graduação ──">
+                  <option value="Administração">Administração</option>
+                  <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
+                  <option value="Biomedicina">Biomedicina</option>
+                  <option value="Ciências Contábeis">Ciências Contábeis</option>
+                  <option value="Direito">Direito</option>
+                  <option value="Educação Física">Educação Física</option>
+                  <option value="Enfermagem">Enfermagem</option>
+                  <option value="Engenharia Civil">Engenharia Civil</option>
+                  <option value="Engenharia de Produção">Engenharia de Produção</option>
+                  <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+                  <option value="Engenharia Mecânica">Engenharia Mecânica</option>
+                  <option value="Farmácia">Farmácia</option>
+                  <option value="Fisioterapia">Fisioterapia</option>
+                  <option value="Gestão Comercial">Gestão Comercial</option>
+                  <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
+                  <option value="Jornalismo">Jornalismo</option>
+                  <option value="Logística">Logística</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Medicina Veterinária">Medicina Veterinária</option>
+                  <option value="Nutrição">Nutrição</option>
+                  <option value="Pedagogia">Pedagogia</option>
+                  <option value="Psicologia">Psicologia</option>
+                  <option value="Publicidade e Propaganda">Publicidade e Propaganda</option>
+                  <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                  <option value="Serviço Social">Serviço Social</option>
+                  <option value="Sistemas de Informação">Sistemas de Informação</option>
+                  <option value="Turismo">Turismo</option>
+                </optgroup>
+                <optgroup label="── Pós-graduação ──">
+                  <option value="MBA em Gestão Empresarial">MBA em Gestão Empresarial</option>
+                  <option value="MBA em Marketing">MBA em Marketing</option>
+                  <option value="MBA em Recursos Humanos">MBA em Recursos Humanos</option>
+                  <option value="MBA em Finanças e Controladoria">MBA em Finanças e Controladoria</option>
+                  <option value="MBA em Gestão de Projetos">MBA em Gestão de Projetos</option>
+                  <option value="MBA em Logística e Supply Chain">MBA em Logística e Supply Chain</option>
+                  <option value="Especialização em Educação">Especialização em Educação</option>
+                  <option value="Especialização em Saúde">Especialização em Saúde</option>
+                  <option value="Especialização em Direito">Especialização em Direito</option>
+                </optgroup>
+                <optgroup label="──────────────">
+                  <option value="Outro curso ou área">Outro curso ou área</option>
+                  <option value="Ainda não sei qual curso escolher">Ainda não sei qual curso escolher</option>
+                </optgroup>
+              </select>
+              <span class="err">Selecione um curso ou área de interesse.</span>
+            </div>
+
+            <div class="field">
+              <div class="field-label">
+                <span class="q-num">7</span>Como você prefere estudar? <span class="req">*</span>
+              </div>
+              <div class="radio-group">
+                <label class="radio-pill">
+                  <input type="radio" name="modalidade" value="100% online" required />
+                  <span>100% online</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="modalidade" value="Semipresencial" />
+                  <span>Semipresencial</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="modalidade" value="Quero conhecer as duas opções" />
+                  <span>Quero conhecer as duas opções</span>
+                </label>
+              </div>
+              <span class="err">Selecione uma modalidade.</span>
+            </div>
+
+            <div class="field">
+              <div class="field-label">
+                <span class="q-num">8</span>Quando você pretende começar? <span class="req">*</span>
+              </div>
+              <div class="radio-group two-col">
+                <label class="radio-pill">
+                  <input type="radio" name="quando" value="O quanto antes" required />
+                  <span>O quanto antes</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="quando" value="Nos próximos 3 meses" />
+                  <span>Nos próximos 3 meses</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="quando" value="Ainda neste ano" />
+                  <span>Ainda neste ano</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="quando" value="Estou apenas pesquisando" />
+                  <span>Estou apenas pesquisando</span>
+                </label>
+              </div>
+              <span class="err">Selecione uma opção.</span>
+            </div>
+          </div>
+
+          <!-- ── COMO SOUBE / CONTATO ── -->
+          <div class="form-group">
+            <div class="form-group-title">Mais informações</div>
+
+            <div class="field">
+              <div class="field-label">
+                <span class="q-num">9</span>Como ficou sabendo sobre nós? <span class="req">*</span>
+              </div>
+              <div class="radio-group two-col">
+                <label class="radio-pill">
+                  <input type="radio" name="origem" value="Indicação de amigos ou familiares" required />
+                  <span>Indicação de amigos ou familiares</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="origem" value="Empresa onde trabalho" />
+                  <span>Empresa onde trabalho</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="origem" value="Redes sociais" />
+                  <span>Redes sociais</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="origem" value="Pesquisa no Google" />
+                  <span>Pesquisa no Google</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="origem" value="Evento ou ação presencial" />
+                  <span>Evento ou ação presencial</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="origem" value="Sou ex-aluno(a)" />
+                  <span>Sou ex-aluno(a)</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="origem" value="Sou servidor(a) público(a)" />
+                  <span>Sou servidor(a) público(a)</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="origem" value="Já conhecia o polo" />
+                  <span>Já conhecia o polo</span>
+                </label>
+                <label class="radio-pill" style="grid-column:1/-1">
+                  <input type="radio" name="origem" value="Outro" />
+                  <span>Outro</span>
+                </label>
+              </div>
+              <span class="err">Selecione uma opção.</span>
+            </div>
+
+            <div class="field">
+              <div class="field-label">
+                <span class="q-num">10</span>Qual é a melhor forma de entrarmos em contato? <span class="req">*</span>
+              </div>
+              <div class="radio-group">
+                <label class="radio-pill">
+                  <input type="radio" name="contatoPref" value="WhatsApp" required />
+                  <span>WhatsApp</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="contatoPref" value="Ligação" />
+                  <span>Ligação</span>
+                </label>
+                <label class="radio-pill">
+                  <input type="radio" name="contatoPref" value="WhatsApp ou ligação" />
+                  <span>WhatsApp ou ligação</span>
+                </label>
+              </div>
+              <span class="err">Selecione uma opção.</span>
+            </div>
+          </div>
+
+          <!-- ── AUTORIZAÇÃO ── -->
+          <div class="form-group">
+            <div class="form-group-title">Autorização e privacidade</div>
+
+            <div class="field">
+              <label class="checkbox-pill">
+                <input type="checkbox" name="autorizaContato" value="Sim" required />
+                <span>Autorizo o contato de um consultor pelos canais selecionados para receber informações sobre cursos, mensalidades, bolsas, formas de ingresso e condições de matrícula.</span>
+              </label>
+              <span class="err">Esta autorização é necessária para prosseguir.</span>
+            </div>
+
+            <div class="privacy-note">
+              <strong>Aviso de privacidade:</strong> seus dados serão utilizados para atendimento e envio das informações solicitadas. Você poderá solicitar a interrupção do contato e a exclusão dos seus dados a qualquer momento, conforme nossa Política de Privacidade.
+            </div>
+
+            <div class="field">
+              <label class="checkbox-pill">
+                <input type="checkbox" name="politicaPriv" value="Sim" required />
+                <span>Li e concordo com a <a href="legal.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.</span>
+              </label>
+              <span class="err">Você precisa aceitar a Política de Privacidade.</span>
+            </div>
+          </div>
+
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="website" id="hp_website" autocomplete="off" tabindex="-1" aria-hidden="true" style="display:none!important;position:absolute;left:-9999px;width:0;height:0" />
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-submit" id="submitBtn">QUERO RECEBER INFORMAÇÕES</button>
+            <p class="form-note">Dados 100% seguros e protegidos. Nunca compartilhamos suas informações.</p>
+          </div>
+
+        </form>
+      </div><!-- /form-body -->
+
+      <div class="form-success">
+        <div class="s-icon">🎉</div>
+        <h3>Cadastro realizado com sucesso!</h3>
+        <p>Nossa equipe entrará em contato em breve com informações sobre cursos, valores e bolsas disponíveis para você.</p>
+      </div>
+
+    </div><!-- /form-card -->
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-inner">
+    <a class="logo" href="#"><img src="assets/anhanguera-logo-colorido-vertical.png" alt="Anhanguera" class="logo-img" /></a>
+    <nav class="foot-links">
+      <a href="legal.html">Política de Privacidade</a>
+    </nav>
+    <p class="foot-copy">© 2026 Anhanguera. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
