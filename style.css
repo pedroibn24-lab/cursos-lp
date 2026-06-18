@@ -13,7 +13,7 @@
   --radius:        16px;
   --shadow:        0 20px 48px -18px oklch(0.20 0.09 262 / 0.38);
   --shadow-sm:     0 8px 22px -14px oklch(0.20 0.09 262 / 0.32);
-  --maxw:          780px;
+  --maxw:          1100px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -79,7 +79,7 @@ header{
   background:
     linear-gradient(160deg, oklch(0.21 0.09 262 / 0.82) 0%, oklch(0.15 0.07 262 / 0.70) 100%),
     url('assets/imagem header.png') center/cover no-repeat;
-  padding:72px 22px 64px;
+  padding:100px 22px 88px;
   text-align:center;
 }
 .page-hero .wrap{max-width:640px}
@@ -137,7 +137,7 @@ header{
 .cta-banner{background:var(--orange);padding:56px 0}
 .cta-banner-inner{
   display:flex;align-items:center;justify-content:space-between;
-  gap:32px;flex-wrap:wrap;max-width:860px!important;
+  gap:32px;flex-wrap:wrap;max-width:1000px!important;
 }
 .cta-banner-text h2{
   font-size:clamp(1.25rem,2.8vw,1.65rem);font-weight:800;
@@ -394,14 +394,15 @@ footer{background:var(--dark);color:oklch(0.80 0.01 70);padding:40px 0 28px}
 
 /* ===================== BENEFITS ===================== */
 .benefits-section{padding:72px 0;background:var(--bg)}
-.benefits-wrap{max-width:860px!important}
+.benefits-wrap{max-width:1000px!important}
 .benefits-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(4,1fr);
   gap:14px;
   margin-top:36px;
 }
-@media(max-width:540px){.benefits-grid{grid-template-columns:1fr}}
+@media(max-width:800px){.benefits-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.benefits-grid{grid-template-columns:1fr}}
 .ben-card{
   background:#fff;
   border:1.5px solid var(--line);
@@ -426,7 +427,7 @@ footer{background:var(--dark);color:oklch(0.80 0.01 70);padding:40px 0 28px}
 
 /* ===================== COURSES MOSAIC ===================== */
 .courses-section{padding:72px 0;background:var(--bg-warm)}
-.courses-wrap{max-width:860px!important}
+.courses-wrap{max-width:1100px!important}
 .courses-mosaic{
   display:grid;
   grid-template-columns:1.5fr 1fr 1fr;
@@ -503,7 +504,7 @@ footer{background:var(--dark);color:oklch(0.80 0.01 70);padding:40px 0 28px}
 
 /* ===================== FAQ ===================== */
 .faq-section{padding:72px 0 80px;background:var(--bg)}
-.faq-wrap{max-width:720px!important}
+.faq-wrap{max-width:860px!important}
 .faq-list{
   margin-top:36px;
   border:1.5px solid var(--line);
