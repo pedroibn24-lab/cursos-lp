@@ -2,7 +2,7 @@
 
 > **Uso exclusivo IBN — Instituto Brasileiro de Negócios** — este repositório é propriedade da IBN e seu uso, cópia ou distribuição sem autorização é expressamente proibido.
 
-Landing page de captação de leads para a Faculdade Anhanguera. Direcionada a pessoas que desejam informações sobre cursos de graduação e pós-graduação — valores, bolsas e formas de ingresso. Os dados preenchidos no formulário são enviados automaticamente para uma planilha via Google Apps Script.
+Landing page de captação de leads para a Faculdade Anhanguera e Unopar. Direcionada a pessoas que desejam informações sobre cursos de graduação e pós-graduação — valores, bolsas e formas de ingresso. Os dados preenchidos no formulário são enviados automaticamente para uma planilha via Google Apps Script.
 
 ## Tecnologias
 
