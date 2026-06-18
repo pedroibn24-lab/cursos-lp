@@ -395,6 +395,14 @@ footer{background:var(--dark);color:oklch(0.80 0.01 70);padding:40px 0 28px}
 }
 .ct h3{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:7px}
 .ct p{font-size:.84rem;color:var(--ink-soft);line-height:1.6}
+.ct-badge{
+  display:inline-block;
+  font-size:.72rem;font-weight:700;
+  padding:2px 8px;border-radius:99px;
+  background:var(--orange-soft);color:var(--orange-strong);
+  border:1px solid oklch(0.72 0.195 44 / 0.25);
+  white-space:nowrap;margin-left:2px;
+}
 
 /* ===================== STATS ===================== */
 .stats-section{
