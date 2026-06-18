@@ -132,3 +132,94 @@ const SHEET_ENDPOINT = ""; // Cole aqui o endpoint do seu Google Apps Script
     });
   });
 })();
+
+// ── HAMBURGER MENU ──
+(function(){
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+  if(!hamburger || !navLinks) return;
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(open));
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+
+// ── MULTI-STEP FORM ──
+(function(){
+  const steps     = document.querySelectorAll('.form-step');
+  const btnNext   = document.getElementById('btnNext');
+  const btnBack   = document.getElementById('btnBack');
+  const submitBtn = document.getElementById('submitBtn');
+  const formCard  = document.getElementById('formCard');
+  if(!steps.length || !btnNext) return;
+
+  let current = 1;
+
+  function showStep(n) {
+    // Clear stale invalid marks from the incoming step before showing
+    const incoming = document.querySelector(`.form-step[data-step="${n}"]`);
+    incoming.querySelectorAll('.field.invalid').forEach(f => f.classList.remove('invalid'));
+
+    steps.forEach(s => { s.hidden = parseInt(s.dataset.step) !== n; });
+
+    document.querySelectorAll('.step-dot').forEach(d => {
+      const sn = parseInt(d.dataset.step);
+      d.classList.toggle('active', sn === n);
+      d.classList.toggle('done',   sn < n);
+    });
+
+    btnBack.hidden   = n === 1;
+    btnNext.hidden   = n === steps.length;
+    submitBtn.hidden = n !== steps.length;
+  }
+
+  function validateStep(n) {
+    const el = document.querySelector(`.form-step[data-step="${n}"]`);
+    let ok = true;
+
+    el.querySelectorAll('input[required]:not([type="radio"]):not([type="checkbox"]), select[required]').forEach(f => {
+      const field = f.closest('.field');
+      let v = f.value.trim() !== '';
+      if(f.id === 'whatsapp') v = v && f.value.replace(/\D/g,'').length >= 10;
+      field.classList.toggle('invalid', !v);
+      if(!v) ok = false;
+    });
+
+    const groups = new Set();
+    el.querySelectorAll('input[type="radio"][required]').forEach(r => groups.add(r.name));
+    groups.forEach(name => {
+      const first = el.querySelector(`input[name="${name}"]`);
+      const field = first.closest('.field');
+      const v = el.querySelector(`input[name="${name}"]:checked`) !== null;
+      field.classList.toggle('invalid', !v);
+      if(!v) ok = false;
+    });
+
+    el.querySelectorAll('input[type="checkbox"][required]').forEach(c => {
+      const field = c.closest('.field');
+      field.classList.toggle('invalid', !c.checked);
+      if(!c.checked) ok = false;
+    });
+
+    return ok;
+  }
+
+  btnNext.addEventListener('click', () => {
+    if(validateStep(current)) {
+      current++;
+      showStep(current);
+      formCard.scrollIntoView({behavior:'smooth', block:'start'});
+    } else {
+      const first = document.querySelector(`.form-step[data-step="${current}"] .field.invalid`);
+      if(first) first.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  });
+
+  btnBack.addEventListener('click', () => { current--; showStep(current); });
+})();

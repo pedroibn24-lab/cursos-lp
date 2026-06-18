@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Quero saber mais sobre os cursos — Anhanguera &amp; Unopar</title>
 <meta name="description" content="Preencha seus dados e receba informações sobre cursos, valores, bolsas e formas de ingresso." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Encontre o curso ideal — Anhanguera &amp; Unopar" />
+<meta property="og:description" content="Fale com um consultor e descubra cursos, bolsas e condições exclusivas para começar ainda este ano." />
+<meta property="og:image" content="assets/imagem header.png" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self';" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <link rel="icon" type="image/png" href="assets/logoo.png" />
@@ -22,11 +27,14 @@
     <a class="logo" href="#" aria-label="Anhanguera e Unopar">
       <img src="assets/logoo.png" alt="Anhanguera e Unopar" class="logo-img" />
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="#">Home</a>
       <a href="#faq">Perguntas</a>
       <a href="#contato">Entrar em contato</a>
     </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -42,6 +50,31 @@
     </div>
   </div>
 </section>
+
+<!-- ============ CREDENTIALS ============ -->
+<div class="cred-bar">
+  <div class="wrap cred-inner">
+    <div class="cred-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Credenciado pelo MEC</span>
+    </div>
+    <div class="cred-sep"></div>
+    <div class="cred-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span>+500 mil alunos</span>
+    </div>
+    <div class="cred-sep"></div>
+    <div class="cred-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>30+ anos de história</span>
+    </div>
+    <div class="cred-sep"></div>
+    <div class="cred-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" width="18" height="18" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+      <span>Diploma com validade nacional</span>
+    </div>
+  </div>
+</div>
 
 <!-- ============ BENEFITS ============ -->
 <section class="benefits-section">
@@ -90,6 +123,44 @@
   </div>
 </section>
 
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials-section">
+  <div class="wrap reveal">
+    <div class="sec-label">Depoimentos</div>
+    <h2 class="sec-h2">Quem estudou <em>recomenda</em></h2>
+    <div class="testimonials-grid">
+
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-quote">"Consegui minha promoção logo após concluir o MBA. A flexibilidade do EAD foi fundamental para conciliar com o trabalho e a família."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">CM</div>
+          <div><strong>Carlos M.</strong><span>MBA em Gestão de Pessoas</span></div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-quote">"Já tinha tentado estudar presencialmente, mas não conseguia conciliar com a rotina. Aqui me formei sem abrir mão do meu emprego."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">AP</div>
+          <div><strong>Ana P.</strong><span>Administração — EAD</span></div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-quote">"O suporte dos tutores faz toda a diferença. Nunca me senti sozinha durante o curso. A qualidade do material superou minhas expectativas."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">JS</div>
+          <div><strong>Juliana S.</strong><span>Pedagogia — Semipresencial</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ============ COURSES ============ -->
 <section class="courses-section">
   <div class="wrap courses-wrap reveal">
@@ -127,6 +198,33 @@
         <p>Criminologia · Ciência Política · Rel. Internacionais · Teologia · Gastronomia · Gestão de Turismo</p>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how-section">
+  <div class="wrap reveal">
+    <div class="sec-label">Processo simples</div>
+    <h2 class="sec-h2">Como <em>funciona</em></h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <h3>Preencha o formulário</h3>
+        <p>Leva menos de 2 minutos. Informe seus dados e o curso que mais te interessa.</p>
+      </div>
+      <div class="how-arrow">→</div>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <h3>Receba o contato</h3>
+        <p>Um consultor entrará em contato em até 24h com informações, valores e condições exclusivas.</p>
+      </div>
+      <div class="how-arrow">→</div>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <h3>Garanta sua matrícula</h3>
+        <p>Efetue a matrícula 100% online, sem sair de casa, e comece a estudar em breve.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -245,6 +343,15 @@
       <div class="form-body">
         <form id="leadForm" novalidate autocomplete="on">
 
+          <div class="step-bar">
+            <div class="step-dot active" data-step="1"><span>1</span><em>Contato</em></div>
+            <div class="step-line"></div>
+            <div class="step-dot" data-step="2"><span>2</span><em>Curso</em></div>
+            <div class="step-line"></div>
+            <div class="step-dot" data-step="3"><span>3</span><em>Finalizar</em></div>
+          </div>
+
+          <div class="form-step" data-step="1">
           <!-- ── DADOS DE CONTATO ── -->
           <div class="form-group">
             <div class="form-group-title">Dados de contato</div>
@@ -275,9 +382,10 @@
 
             <div class="field">
               <label class="field-label" for="empresa">
-                <span class="q-num">4</span>Empresa onde você trabalha
+                <span class="q-num">4</span>Empresa onde você trabalha <span class="req">*</span>
               </label>
-              <input type="text" id="empresa" name="empresa" autocomplete="organization" placeholder="Ex: Empresa Ltda." />
+              <input type="text" id="empresa" name="empresa" autocomplete="organization" placeholder="Ex: Empresa Ltda." required />
+              <span class="err">Informe a empresa onde você trabalha.</span>
             </div>
           </div>
 
@@ -326,7 +434,9 @@
               <span class="err">Selecione seu grau de escolaridade.</span>
             </div>
           </div>
+          </div><!-- /step-1 -->
 
+          <div class="form-step" data-step="2" hidden>
           <!-- ── INTERESSE EM CURSOS ── -->
           <div class="form-group">
             <div class="form-group-title">Interesse em cursos</div>
@@ -507,7 +617,9 @@
               <span class="err">Selecione uma opção.</span>
             </div>
           </div>
+          </div><!-- /step-2 -->
 
+          <div class="form-step" data-step="3" hidden>
           <!-- ── COMO SOUBE / CONTATO ── -->
           <div class="form-group">
             <div class="form-group-title">Mais informações</div>
@@ -604,21 +716,27 @@
             </div>
           </div>
 
+          </div><!-- /step-3 -->
+
           <!-- Honeypot anti-spam -->
           <input type="text" name="website" id="hp_website" autocomplete="off" tabindex="-1" aria-hidden="true" style="display:none!important;position:absolute;left:-9999px;width:0;height:0" />
 
-          <div class="form-submit">
-            <button type="submit" class="btn btn-submit" id="submitBtn">QUERO RECEBER INFORMAÇÕES</button>
-            <p class="form-note">Dados 100% seguros e protegidos. Nunca compartilhamos suas informações.</p>
+          <div class="form-step-nav">
+            <button type="button" class="btn-back" id="btnBack" hidden>← Voltar</button>
+            <div>
+              <button type="button" class="btn btn-next" id="btnNext">Próximo →</button>
+              <button type="submit" class="btn btn-submit" id="submitBtn" hidden>QUERO RECEBER INFORMAÇÕES</button>
+            </div>
           </div>
+          <p class="form-note">Dados 100% seguros e protegidos. Nunca compartilhamos suas informações.</p>
 
         </form>
       </div><!-- /form-body -->
 
       <div class="form-success">
-        <div class="s-icon">🎉</div>
-        <h3>Cadastro realizado com sucesso!</h3>
-        <p>Nossa equipe entrará em contato em breve com informações sobre cursos, valores e bolsas disponíveis para você.</p>
+        <div class="s-check">✓</div>
+        <h3>Concluído!</h3>
+        <p>Recebemos seu cadastro. Nossa equipe entrará em contato em <strong>até 24 horas</strong> com informações sobre cursos, valores e bolsas disponíveis para você.</p>
       </div>
 
     </div><!-- /form-card -->
@@ -636,6 +754,5 @@
     <p class="foot-copy">© 2026 Anhanguera &amp; Unopar. Todos os direitos reservados.</p>
   </div>
 </footer>
-
 </body>
 </html>
