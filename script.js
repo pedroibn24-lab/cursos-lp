@@ -1,4 +1,4 @@
-const SHEET_ENDPOINT = ""; // Cole aqui o endpoint do seu Google Apps Script
+const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbyfMYB8VCgN0pnnXIT4Xlugm9r62xdQcITJ39FZ0lzbuK_vYqkvpKDQXHfX1baqWhGENQ/exec";
 
 (function(){
   const form = document.getElementById('leadForm');
